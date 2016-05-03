@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Virtmedic</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="center" style="background-color: limegreen">
+                    <h:form>
+                        <p:panel id="panelRegistroPrincipal" header="Registro de Usuario"  style="text-align: center">
+                            <p:fieldset >
+                                <h:panelGrid columns="3" cellpadding="5" width="80%" style="text-align: left">
+
+
+                                    <h:outputText value="Usuario" />
+                                    <h:outputText value="Contraseña" />
+                                    <h:outputText value="Confirme Contraseña"/>
+
+                                    <p:inputText id="nombreUsuario"  />
+                                    <p:inputText id="contraseña"  />
+                                    <p:inputText id="confirmeContraseña"  />
+                                    
+                                    <h:outputText value="Pregunta Secreta" />
+                                    <h:outputText value="Respuesta" />
+                                    <h:outputText value=""/>
+
+                                    <p:inputText id="preguntaSecreta"  />
+                                    <p:inputText id="respuesta"  />
+                                    <h:outputText value=""/>
+
+                                    <h:outputText value="Tipo de identificacion" />
+                                    <h:outputText value="Numero de Documento" />
+                                    <h:outputText value="Fecha de Nacimiento" />
+
+                                    <p:inputText id="tipoIdentificacion"  />
+                                    <p:inputText id="numeroIdentficacion"  />
+                                    <p:inputText id="fechaNacimiento"  />
+
+                                    <h:outputText value="Primer Nombre" />
+                                    <h:outputText value="Segundo Nombre" />
+                                    <h:outputText value="Primer Apellido" />
+
+                                    <p:inputText id="primerNombre"  />
+                                    <p:inputText id="SegundoNombre"  />
+                                    <p:inputText id="srimerApellido"  />
+
+                                    <h:outputText value="Segundo Apellido" />
+                                    <h:outputText value="Sexo" />
+                                    <h:outputText value="Estado Civil" />
+
+                                    <p:inputText id="segundoApellido"  />
+                                    <p:inputText id="sexo"  />
+                                    <p:inputText id="estadoCivil"  />
+                                    
+                                    <h:outputText value="Direccion" />
+                                    <h:outputText value="Telefono" />
+                                    <h:outputText value="Celular" />
+
+                                    <p:inputText id="direccion"  />
+                                    <p:inputText id="telefono"  />
+                                    <p:inputText id="celular"  />
+
+                                    <h:outputText value="Correo" />
+                                    <h:outputText value="Ciudad de recidencia" />
+                                    <h:outputText value="" />
+
+                                    <p:inputText id="correo"  />
+                                    <p:inputText id="ciudadRecidencia"  />
+                                    <h:outputText value=""  />
+
+
+
+                                </h:panelGrid>
+                            </p:fieldset>
+                            <p:fieldset >
+                                <p:commandButton value="Guardar" id="btnregistroUsuario" actionListener="#{buttonAction}" styleClass="ui-priority-primary" />
+                            </p:fieldset>
+
+
+                        </p:panel>
+                    </h:form>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="east" size="380"  collapsible="true">
+                    <h:form>
+                        <p:growl id="msgs" showDetail="true" />
+
+                        <p:fieldset >
+                            <h:panelGrid columns="1" cellpadding="5" width="100%">
+
+                                <img width="50%" src="images/logo.jpg" alt=""/>
+
+                            </h:panelGrid>
+                        </p:fieldset>
+
+                    </h:form>
+
+                    <h:form>
+                        <p:panel id="panelRegistro" header="Registro"  style="text-align: center">
+
+                            <h:panelGrid columns="1" cellpadding="5" width="100%">
+                                <h:outputText value="Ingrese la iformacion completa, tenga en cunata que para poder validar la informacion su debe digitar una cuenta de correo valida" style="text-align: center"/>
+                            </h:panelGrid>
+                            <h1/>
+                        </p:panel>
+
+                    </h:form>
+                    <h:form>
+                        <p:panel id="registrarse" style="text-align: center">
+                            <p:messages id="messages" />
+                            <h:panelGrid columns="2" cellpadding="5" width="100%">
+
+                                <p:commandButton value="Regresar" id="btnregistro" actionListener="#{buttonAction}" styleClass="ui-priority-primary" />
+                            </h:panelGrid>
+                            <h1 style="color: white">.</h1>
+
+                        </p:panel>
+                        <h5 style="color: darkgreen; text-align:center "> Todos los derechos reservados - 2016</h5>
+
+                    </h:form>
+
+
+                </p:layoutUnit>
+
+
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
+
